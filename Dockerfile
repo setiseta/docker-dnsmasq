@@ -3,9 +3,9 @@ MAINTAINER Seti <seti@setadesign.net>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && \
-    apt-get install -y dnsmasq \
-    apt-get clean && \
+RUN apt update && \
+    apt  install -y dnsmasq && \
+    apt clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 53 53/udp
